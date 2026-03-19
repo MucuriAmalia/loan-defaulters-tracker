@@ -48,9 +48,13 @@ class LoansImport implements ToModel, WithHeadingRow
         ]);
 
         // --- Create or get Village ---
-        $village = null;
+       $village = null;
+
         if ($villageName) {
-            $village = Village::firstOrCreate(['name' => $villageName]);
+            $village = Village::updateOrCreate(
+                ['name' => $villageName],
+                ['branch_id' => $row['branch_id']]
+            );
         }
 
         // --- Parse last paid date safely ---

@@ -9,7 +9,7 @@ class Village extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name'];
+    protected $fillable = ['name', 'branch_id'];
 
     public function loans()
     {
