@@ -1,11 +1,12 @@
 import { router } from '@inertiajs/react';
 import React, { useState, useMemo } from 'react';
-import AppLayout from '@/Layouts/AppLayout';
+import { Badge } from '@/Components/ui/Badge';
 import { Button } from '@/Components/ui/Button';
+import { Card } from '@/Components/ui/Card';
 import { Input } from '@/Components/ui/Input';
 import { Select, SelectItem } from '@/Components/ui/Select';
-import { Card } from '@/Components/ui/Card';
-import { Badge } from '@/Components/ui/Badge';
+import AppLayout from '@/Layouts/AppLayout';
+
 
 interface CreditOfficer {
   id: number;
